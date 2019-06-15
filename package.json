@@ -1,0 +1,11 @@
+{
+  "name": "repo-event-notifier-lambda",
+  "version": "0.0.0",
+  "description": "An AWS lambda that monitors repos & talks to you in Slack",
+  "license": "ISC",
+  "author": "Gareth Jones",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
