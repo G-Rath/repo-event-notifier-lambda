@@ -11,6 +11,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^10.14.9",
     "ts-transform-paths": "^2.0.0",
     "ttypescript": "^1.5.7",
     "typescript": "^3.5.2"
