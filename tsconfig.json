@@ -31,7 +31,9 @@
     "removeComments": true,
     "esModuleInterop": true,
     "newLine": "LF",
-    "plugins": []
+    "plugins": [
+      { "transform": "ts-transform-paths" }
+    ]
   },
   "exclude": [ "node_modules" ]
 }
