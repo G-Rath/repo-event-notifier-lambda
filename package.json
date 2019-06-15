@@ -5,7 +5,12 @@
   "license": "ISC",
   "author": "Gareth Jones",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "check": "tsc --noEmit",
+    "compile": "tsc -p src/tsconfig.json"
+  },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^3.5.2"
+  }
 }
