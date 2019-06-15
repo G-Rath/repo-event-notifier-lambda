@@ -1,3 +1,5 @@
+import * as HttpStatus from 'http-status-codes';
+
 type StringMap = Record<string, string>;
 
 export interface ApiGatewayRequest {
@@ -14,6 +16,14 @@ export interface ApiGatewayRequest {
   isBase64Encoded: boolean;
 }
 
-export const handler = async (request: ApiGatewayRequest) => {
+export interface ApiGatewayResponse {
+  statusCode: number;
+  body: string | object;
+}
 
+export const handler = async (request: ApiGatewayRequest): Promise<ApiGatewayResponse> => {
+  return {
+    statusCode: HttpStatus.NOT_FOUND,
+    body: {}
+  };
 };
