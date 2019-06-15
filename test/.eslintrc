@@ -1,0 +1,30 @@
+{
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "plugins": [
+    "eslint-plugin-jest"
+  ],
+  "extends": [
+    "plugin:eslint-plugin-jest/recommended",
+    "plugin:eslint-plugin-jest/style"
+  ],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "jest/no-test-return-statement": "warn",
+    "jest/no-test-callback": "error",
+    "jest/no-truthy-falsy": "error",
+    "jest/no-empty-title": "error",
+    "jest/prefer-spy-on": "warn",
+    "jest/prefer-todo": "warn",
+    "jest/prefer-called-with": "warn",
+    "jest/expect-expect": "error",
+    "jest/require-tothrow-message": "warn",
+    "jest/lowercase-name": [
+      "warn", {
+        "ignore": [ "describe" ]
+      }
+    ],
+    "no-shadow": "off"
+  }
+}

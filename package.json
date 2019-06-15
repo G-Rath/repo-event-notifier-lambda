@@ -7,11 +7,17 @@
   "main": "index.js",
   "scripts": {
     "check": "ttsc --noEmit",
-    "compile": "ttsc -p src/tsconfig.json"
+    "compile": "ttsc -p src/tsconfig.json",
+    "lint": "npm run lint:all --silent",
+    "lint:all": "eslint \"**/*.{t,j}s{x,}\""
   },
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^10.14.9",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.6.4",
     "ts-transform-paths": "^2.0.0",
     "ttypescript": "^1.5.7",
     "typescript": "^3.5.2"
