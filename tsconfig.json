@@ -26,7 +26,7 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "noEmitOnError": true,
-    "pretty": false,
+    "pretty": true,
     "sourceMap": false,
     "removeComments": true,
     "esModuleInterop": true,
