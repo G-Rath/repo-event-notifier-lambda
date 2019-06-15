@@ -1,0 +1,6 @@
+{
+  "linters": {
+    "**/*.{t,j}s{x,}": "eslint",
+    "**/.eslint{rc,ignore}": "npm run lint:all"
+  }
+}
