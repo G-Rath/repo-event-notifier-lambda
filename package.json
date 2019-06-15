@@ -19,6 +19,7 @@
     "@typescript-eslint/parser": "^1.10.2",
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^22.6.4",
+    "husky": "^2.4.1",
     "lint-staged": "^8.2.1",
     "ts-transform-paths": "^2.0.0",
     "ttypescript": "^1.5.7",
