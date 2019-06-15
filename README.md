@@ -40,11 +40,14 @@ This can be done using the `compile` script:
 npm run compile
 ```
 
-This will call `tsc` compile, using the `tsconfig.json` located in the `src` folder,
+This will call `ttsc` compile, using the `tsconfig.json` located in the `src` folder,
 and result in every `.ts` file in the `src` folder being compiled into Javascript.
 
 The `src/tsconfig.json` extends from the root `tsconfig.json`, as so not compile
 the contents of the `test` folder, which are not needed for deployment.
+
+Note that this project uses ts transformers, which are applied using `ttypescript`.
+This means that you have to use `ttsc` instead of `tsc` when compiling the project.
 
 ## Deploying
 

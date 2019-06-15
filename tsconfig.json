@@ -30,7 +30,8 @@
     "sourceMap": false,
     "removeComments": true,
     "esModuleInterop": true,
-    "newLine": "LF"
+    "newLine": "LF",
+    "plugins": []
   },
   "exclude": [ "node_modules" ]
 }

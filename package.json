@@ -6,11 +6,12 @@
   "author": "Gareth Jones",
   "main": "index.js",
   "scripts": {
-    "check": "tsc --noEmit",
-    "compile": "tsc -p src/tsconfig.json"
+    "check": "ttsc --noEmit",
+    "compile": "ttsc -p src/tsconfig.json"
   },
   "dependencies": {},
   "devDependencies": {
+    "ttypescript": "^1.5.7",
     "typescript": "^3.5.2"
   }
 }
