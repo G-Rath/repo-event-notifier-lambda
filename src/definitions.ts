@@ -9,9 +9,27 @@ export interface ApiGatewayRequest {
   queryStringParameters: StringMap;
   pathParameters: StringMap;
   stageVariables: StringMap;
-  requestContext: object;
+  requestContext: ApiGatewayRequestContext;
   body: string;
   isBase64Encoded: boolean;
+}
+
+export interface ApiGatewayRequestContext {
+  resourceId: string;
+  resourcePath: string;
+  httpMethod: string;
+  extendedRequestId: string;
+  requestTime: string;
+  path: string;
+  accountId: string;
+  protocol: string;
+  stage?: string;
+  domainPrefix: string;
+  requestTimeEpoch: number;
+  requestId: string;
+  identity?: unknown;
+  domainName: string;
+  apiId: string;
 }
 
 export interface ApiGatewayResponse {
