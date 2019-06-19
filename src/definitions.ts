@@ -6,9 +6,10 @@ export interface ApiGatewayRequest {
   httpMethod: string;
   headers: StringMap;
   multiValueHeaders: Record<string, string[]>;
-  queryStringParameters: StringMap;
-  pathParameters: StringMap;
-  stageVariables: StringMap;
+  multiValueQueryStringParameters: Record<string, string[]> | null;
+  queryStringParameters: StringMap | null;
+  pathParameters: StringMap | null;
+  stageVariables: StringMap | null;
   requestContext: ApiGatewayRequestContext;
   body: string;
   isBase64Encoded: boolean;
