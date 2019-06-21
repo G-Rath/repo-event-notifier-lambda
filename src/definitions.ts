@@ -1,15 +1,13 @@
-export type StringMap = Record<string, string | undefined>;
-
 export interface ApiGatewayRequest {
   resource: string;
   path: string;
   httpMethod: string;
-  headers: StringMap;
+  headers: Record<string, string | undefined>;
   multiValueHeaders: Record<string, string[]>;
   multiValueQueryStringParameters: Record<string, string[]> | null;
-  queryStringParameters: StringMap | null;
-  pathParameters: StringMap | null;
-  stageVariables: StringMap | null;
+  queryStringParameters: Record<string, string | undefined> | null;
+  pathParameters: Record<string, string | undefined> | null;
+  stageVariables: Record<string, string | undefined> | null;
   requestContext: ApiGatewayRequestContext;
   body: string;
   isBase64Encoded: boolean;
