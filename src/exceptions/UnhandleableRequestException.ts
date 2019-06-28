@@ -16,7 +16,7 @@ export class UnhandleableRequestException extends GenericException {
    * @param {Object} request the request that couldn't be handled by the throwing handler.
    */
   public constructor(handler: string, request: object) {
-    super(`${handler} was given an unprocessable request`);
+    super(`${handler} was given an unhandleable request`);
 
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, UnhandleableRequestException);
