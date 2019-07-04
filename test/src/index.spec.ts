@@ -12,6 +12,6 @@ describe('index', () => {
   it('responds /w an empty "body"', async () => {
     const response = await handler(buildApiGatewayRequest());
 
-    expect(response.statusCode).toStrictEqual(HttpStatus.NOT_FOUND);
+    expect(response.body).toStrictEqual({});
   });
 });
