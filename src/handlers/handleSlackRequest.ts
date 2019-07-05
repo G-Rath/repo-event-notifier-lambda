@@ -1,6 +1,16 @@
 import { ApiGatewayRequest, ApiGatewayResponse } from '@src/definitions';
-import { UnhandleableRequestException } from '@src/exceptions';
+import { EventType, SlackEvent } from '@src/definitions/slack';
+import * as HttpStatus from 'http-status-codes';
 
 export const handleSlackRequest = async (request: ApiGatewayRequest): Promise<ApiGatewayResponse> => {
-  throw new UnhandleableRequestException(handleSlackRequest.name, request);
+  const slackRequest: SlackEvent = JSON.parse(request.body);
+
+  return {
+    statusCode: HttpStatus.OK,
+    body: (
+      slackRequest.type === EventType.UrlVerification
+        ? { challenge: slackRequest.challenge }
+        : {}
+    )
+  };
 };
