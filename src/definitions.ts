@@ -1,3 +1,5 @@
+export * from './definitions/RequestHandler';
+
 export interface ApiGatewayRequest {
   resource: string;
   path: string;
