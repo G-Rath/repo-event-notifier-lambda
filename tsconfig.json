@@ -29,6 +29,7 @@
     "esModuleInterop": true,
     "newLine": "LF",
     "plugins": [
+      { "transform": "ts-nameof" },
       { "transform": "ts-transform-paths" }
     ]
   },
