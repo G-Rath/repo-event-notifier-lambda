@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/node';
 import { handleSlackRequest } from '@src/handlers';
 import { handler } from '@src/index';
 import { isRequestFromSlack } from '@src/utils';
@@ -7,11 +8,26 @@ import { mocked } from 'ts-jest/utils';
 
 jest.mock('@src/utils/isRequestFromSlack');
 jest.mock('@src/handlers/handleSlackRequest');
+jest.mock('@sentry/node');
 
 const mockedIsRequestFromSlack = mocked(isRequestFromSlack);
 const mockedHandleSlackRequest = mocked(handleSlackRequest);
 
+const mockedSentry = mocked(Sentry);
+
 describe('index', () => {
+  describe('when an exception is thrown', () => {
+    beforeEach(() => mockedIsRequestFromSlack.mockImplementation(() => {
+      throw new Error();
+    }));
+
+    it('captures it w/ Sentry', async () => {
+      await handler(buildApiGatewayRequest());
+
+      expect(mockedSentry.captureException).toHaveBeenCalledWith(expect.any(Error));
+    });
+  });
+
   describe('when the request is from slack', () => {
     beforeEach(() => mockedIsRequestFromSlack.mockReturnValue(true));
 
