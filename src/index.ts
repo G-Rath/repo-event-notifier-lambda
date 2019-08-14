@@ -9,7 +9,7 @@ Sentry.init({ dsn: process.env.SENTRY_DNS, maxValueLength: 1000 });
 export const handler = async (request: ApiGatewayRequest): Promise<ApiGatewayResponse> => {
   try {
     if (isRequestFromSlack(request)) {
-      return handleSlackRequest(request);
+      return await handleSlackRequest(request);
     }
   } catch (error) {
     Sentry.captureException(error);
