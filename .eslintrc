@@ -40,7 +40,7 @@
         "protected": "^_"
       }
     ],
-    "@typescript-eslint/array-type": [ "error", "array-simple" ],
+    "@typescript-eslint/array-type": [ "error", { "default": "array-simple" } ],
     "@typescript-eslint/camelcase": [ "error", { "allow": [ "child_process" ] } ],
     "@typescript-eslint/semi": [ "error", "always" ],
     "@typescript-eslint/indent": [
@@ -103,6 +103,7 @@
       }
     ],
     "camelcase": "off",
-    "quotes": [ "error", "single" ]
+    "quotes": [ "error", "single" ],
+    "quote-props": [ "error", "consistent-as-needed" ]
   }
 }
